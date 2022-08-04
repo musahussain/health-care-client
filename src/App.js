@@ -5,6 +5,7 @@ import Appointment from './Pages/Appointment/Appointment';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Signup from './Pages/Signup/Signup';
+import Footer from './SharedComponent/Footer';
 import Header from './SharedComponent/Header';
 import NotFound from './SharedComponent/NotFound';
 
@@ -25,6 +26,7 @@ function App() {
         <Route path='*' element={<NotFound></NotFound>}></Route>
         
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

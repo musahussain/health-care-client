@@ -17,13 +17,13 @@ const Testmonials = () => {
             _id:2,
             name: "Jonny Bairstow",
             review_description: "Very Good treatment. Would recommend",
-            reviewer_img: people1
+            reviewer_img: people2
         },
         {
             _id:3,
             name: "Moeen Ali",
             review_description: "Very Good treatment. Would recommend",
-            reviewer_img: people1
+            reviewer_img: people3
         }
     ]
   return (
