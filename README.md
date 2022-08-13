@@ -5,12 +5,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # Health Care
 
 [Live site](https://health-care-be77e.web.app/).
-This is a web app for doctor
-People can book appointments
-User can see jis appointments in dashboard
-React.js is used on the front-end
-Node.js is used on the backend
-React Query is used
+* This is a web app for doctor
+* People can book appointments
+* User can see jis appointments in dashboard
+* React.js is used on the front-end
+* Node.js is used on the backend
+* React Query is used
 
 ## Available Scripts
 
