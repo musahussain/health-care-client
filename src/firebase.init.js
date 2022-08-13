@@ -6,12 +6,12 @@ import { getAuth } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDfsSUs0oh-q-wYxrbUsIFKAib7PczK8bQ",
-  authDomain: "health-care-be77e.firebaseapp.com",
-  projectId: "health-care-be77e",
-  storageBucket: "health-care-be77e.appspot.com",
-  messagingSenderId: "45757918402",
-  appId: "1:45757918402:web:e82c79c3ec871749af5f5b"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID
 };
 
 // Initialize Firebase
