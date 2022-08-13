@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import chair from '../../assets/images/chair.png';
 import PrimaryButton from "../../SharedComponent/PrimaryButton";
 
@@ -15,7 +16,7 @@ const Banner = () => {
           <p className="py-6">
             Your health is the most important thing in your life. Your Health matters the most. Hence the proverb "Health is Wealth" 
           </p>
-          <PrimaryButton>Get Started</PrimaryButton>
+          <Link className="btn btn-primary text-white" to="/appointment">Get Started</Link>
         </div>
       </div>
     </div>

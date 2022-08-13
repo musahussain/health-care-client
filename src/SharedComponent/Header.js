@@ -30,7 +30,7 @@ const Header = () => {
       listStyle: "none",
       marginRight: "15px"
 
-    }}><Link to="/login">Login</Link></li>
+    }}><Link className='btn btn-outline' to="/login">Login</Link></li>
     
   </div>
 </div>
