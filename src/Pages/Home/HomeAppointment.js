@@ -15,7 +15,7 @@ const HomeAppointment = () => {
             <div className='p-28 flex-1'>
                 <h3 className='text-xl text-accent'>Appointment</h3>
                 <h2 className='text-3xl text-white'>Make an Appointment today</h2>
-                <p className='text-white mt-3 mb-3 text-justify lg:text-center'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In amet eveniet a quos minus optio provident odio, rem illum pariatur, quam, velit totam natus necessitatibus aspernatur! Hic officiis quam sequi.</p>
+                <p className='text-white mt-3 mb-3 text-justify lg:text-center'>If you have problems in your teeth, then don't wait more. Book a appointment now. Take advice from physician to keep your teeth healthy.</p>
                 <Link className="btn btn-primary text-white" to="/appointment">Book Now</Link>
             </div>
         </section>

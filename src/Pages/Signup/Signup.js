@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Loading from '../../SharedComponent/Loading';
 
 const SignUp = () => {
-    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [
         createUserWithEmailAndPassword,
@@ -21,12 +21,16 @@ const SignUp = () => {
 
     let signInError;
 
-    if (loading || googleLoading || updating) {
+    if (loading || gLoading || updating) {
         return <Loading></Loading>
     }
 
-    if (error || googleError || updateError) {
-        signInError = <p className='text-red-500'><small>{error?.message || googleError?.message || updateError?.message}</small></p>
+    if (error || gError || updateError) {
+        signInError = <p className='text-red-500'><small>{error?.message || gError?.message || updateError?.message}</small></p>
+    }
+
+    if (user || gUser) {
+        console.log(user || gUser);
     }
 
     const onSubmit = async data => {
@@ -35,6 +39,7 @@ const SignUp = () => {
         console.log('update done');
         navigate('/appointment');
     }
+    
     return (
         
         <div className='flex h-screen justify-center items-center'>

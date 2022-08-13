@@ -6,38 +6,37 @@ import { useForm } from "react-hook-form";
 import Loading from "../../SharedComponent/Loading";
 
 const Login = () => {
-  const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
-  
-  const { register, formState: { errors }, handleSubmit } = useForm();
-  const [
-      signInWithEmailAndPassword,
-      user,
-      loading,
-      error,
-  ] = useSignInWithEmailAndPassword(auth);
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+    const { register, formState: { errors }, handleSubmit } = useForm();
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
 
-  let signInError;
-  const navigate = useNavigate();
-  const location = useLocation();
-  let from = location.state?.from?.pathname || "/";
+    let signInError;
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
-  useEffect( () =>{
-      if (user || googleUser) {
-          navigate(from, { replace: true });
-      }
-  }, [user, googleUser, from, navigate])
+    useEffect( () =>{
+        if (user || gUser) {
+            navigate(from, { replace: true });
+        }
+    }, [user, gUser, from, navigate])
 
-  if (googleLoading || googleLoading) {
-      return <Loading></Loading>
-  }
+    if (loading || gLoading) {
+        return <Loading></Loading>
+    }
 
-  if(googleLoading || googleError){
-      signInError= <p className='text-red-500'><small>{googleLoading?.message || googleError?.message }</small></p>
-  }
+    if(error || gError){
+        signInError= <p className='text-red-500'><small>{error?.message || gError?.message }</small></p>
+    }
 
-  const onSubmit = data => {
-      signInWithEmailAndPassword(data.email, data.password);
-  }
+    const onSubmit = data => {
+        signInWithEmailAndPassword(data.email, data.password);
+    }
 
   return (
     <div className="flex min-h-screen justify-center items-center">
